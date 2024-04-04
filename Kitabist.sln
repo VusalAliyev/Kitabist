@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{08E50057-9AA9-470A-8267-4B92C033E673}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F3743B40-A704-4874-9BFC-07399E730EED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Catalog", "Services\Catalog\Kitabist.Catalog\Kitabist.Catalog.csproj", "{C327F93B-221E-495B-97D6-63FF026ECE7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3743B40-A704-4874-9BFC-07399E730EED} = {08E50057-9AA9-470A-8267-4B92C033E673}
+		{C327F93B-221E-495B-97D6-63FF026ECE7C} = {F3743B40-A704-4874-9BFC-07399E730EED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF5874F7-CA8F-4B3B-8671-0E685CD26705}
+	EndGlobalSection
+EndGlobal
