@@ -3,7 +3,7 @@ using Kitabist.Catalog.Dtos.Product;
 
 namespace Kitabist.Catalog.Services.Interfaces
 {
-    public interface ICategoryServices
+    public interface ICategoryService
     {
         Task<List<GetAllCategoryDto>> GetAllCategoriesAsync();  
         Task<GetCategoryByIdDto> GetCategoryByIdAsync(string id);

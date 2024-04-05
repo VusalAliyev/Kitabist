@@ -10,7 +10,7 @@ namespace Kitabist.Catalog.Entities
         public string ProductDetailId { get; set; }
         public string ProductDescription { get; set; }
         public int Page { get; set; }
-        public int ProductID { get; set; }
+        public string ProductID { get; set; }
         [BsonIgnore]
         public Product Product { get; set; }
     }
