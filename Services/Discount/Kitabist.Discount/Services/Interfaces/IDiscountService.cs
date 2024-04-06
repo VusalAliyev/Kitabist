@@ -8,6 +8,6 @@ namespace Kitabist.Discount.Services.Interfaces
         Task UpdateDiscountAsync(UpdateCouponDto updateCouponDto);
         Task<List<GetAllCouponsDto>> GetAllCouponsAsync();
         Task DeleteDiscountAsync(int id);
-        Task<GetCouponById> GetCouponById(GetCouponById getCouponById);
+        Task<GetCouponByIdDto> GetCouponByIdAsync(int id);
     }
 }

@@ -25,7 +25,7 @@ namespace Kitabist.Discount.Services
         {
             using (var connection = CreateConnection())
             {
-                await connection.ExecuteAsync("UPDATE Coupons SET Code = @Code, Rate = @Rate, IsActive = @IsActive, ValidDate = @ValidDate WHERE CouponId = @CouponId", createCouponDto);
+              var salam =  await connection.ExecuteAsync("INSERT INTO Coupons (Code, IsActive, Rate, ValidDate) VALUES (@Code, @IsActive, @Rate, @ValidDate)", createCouponDto);
             }
         }
 
@@ -41,19 +41,21 @@ namespace Kitabist.Discount.Services
         {
             using (var connection = CreateConnection())
             {
-                return await connection.QueryFirstOrDefaultAsync<List<GetAllCouponsDto>>(
+                var coupons= await connection.QueryAsync<GetAllCouponsDto>(
                     "Select * from Coupons"
                     );
+                return coupons.ToList();
             }
         }
 
-        public async Task<GetCouponById> GetCouponById(GetCouponById getCouponById)
+        public async Task<GetCouponByIdDto> GetCouponByIdAsync(int id)
         {
             using (var connection = CreateConnection())
             {
-                return await connection.QueryFirstOrDefaultAsync<GetCouponById>(
-                    "Select * from Coupons where CouponId = @CouponId", new { CouponId = getCouponById.CouponId }
+                var coupon= await connection.QueryAsync<GetCouponByIdDto>(
+                    "Select * from Coupons where CouponId = @CouponId", new { CouponId = id}
                     );
+                return coupon.FirstOrDefault();
             }
         }
 

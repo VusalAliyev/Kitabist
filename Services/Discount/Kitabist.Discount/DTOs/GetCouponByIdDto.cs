@@ -1,6 +1,6 @@
 ﻿namespace Kitabist.Discount.DTOs
 {
-    public class GetCouponById
+    public class GetCouponByIdDto
     {
         public int CouponId { get; set; }
         public string Code { get; set; }
