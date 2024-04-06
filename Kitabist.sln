@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F374
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Catalog", "Services\Catalog\Kitabist.Catalog\Kitabist.Catalog.csproj", "{C327F93B-221E-495B-97D6-63FF026ECE7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{C7EBB3B3-705C-4C94-A889-8EAA916F3EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitabist.Discount", "Services\Discount\Kitabist.Discount\Kitabist.Discount.csproj", "{D4C8007F-8B4B-45B0-BD41-2729FBD48675}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,10 @@ Global
 		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C327F93B-221E-495B-97D6-63FF026ECE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C8007F-8B4B-45B0-BD41-2729FBD48675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C8007F-8B4B-45B0-BD41-2729FBD48675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C8007F-8B4B-45B0-BD41-2729FBD48675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C8007F-8B4B-45B0-BD41-2729FBD48675}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +34,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F3743B40-A704-4874-9BFC-07399E730EED} = {08E50057-9AA9-470A-8267-4B92C033E673}
 		{C327F93B-221E-495B-97D6-63FF026ECE7C} = {F3743B40-A704-4874-9BFC-07399E730EED}
+		{C7EBB3B3-705C-4C94-A889-8EAA916F3EFF} = {08E50057-9AA9-470A-8267-4B92C033E673}
+		{D4C8007F-8B4B-45B0-BD41-2729FBD48675} = {C7EBB3B3-705C-4C94-A889-8EAA916F3EFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF5874F7-CA8F-4B3B-8671-0E685CD26705}
