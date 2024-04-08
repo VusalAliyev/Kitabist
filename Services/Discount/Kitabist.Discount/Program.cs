@@ -16,7 +16,7 @@ builder.Services.AddScoped<IDiscountService, DiscountService>();
 
 builder.Services.AddDbContext<DapperDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DiscountDefaultConnection"));
 });
 
 var app = builder.Build();
