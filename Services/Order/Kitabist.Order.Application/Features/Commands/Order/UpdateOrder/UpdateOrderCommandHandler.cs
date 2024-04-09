@@ -24,8 +24,10 @@ namespace Kitabist.Order.Application.Features.Commands.Order.UpdateOrder
             order.OrderDate = request.OrderDate;
             order.TotalPrice = request.TotalPrice;
             order.UserId = request.UserId;
+
             await _repository.UpdateAsync(order);
-            return new UpdateOrderCommandResponse { IsSuccess=true };
+
+            return new UpdateOrderCommandResponse { IsSuccess = true };
 
         }
     }
