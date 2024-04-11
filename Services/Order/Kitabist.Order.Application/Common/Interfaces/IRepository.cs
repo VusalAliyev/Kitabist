@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kitabist.Order.Application.Interfaces
+namespace Kitabist.Order.Application.Common.Interfaces
 {
     public interface IRepository<T> where T : class
     {
@@ -12,6 +12,6 @@ namespace Kitabist.Order.Application.Interfaces
         Task<T> GetByIdAsync(int id);
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(T entity);
     }
 }

@@ -1,11 +1,10 @@
-﻿using Kitabist.Order.Application.Interfaces;
+﻿using Kitabist.Order.Application.Common.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ordering = Kitabist.Order.Domain.Entities.Order;
 
 namespace Kitabist.Order.Application.Features.Commands.Order.UpdateOrder
 {

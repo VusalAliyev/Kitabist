@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kitabist.Order.Application.Common.Results;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Kitabist.Order.Application.Features.Commands.OrderDetail.CreateOrderDetail
 {
-    public class CreateOrderDetailCommandResponse
+    public class CreateOrderDetailCommandResponse : Result
     {
-        public bool IsSuccess { get; set; }
-        public string? Message { get; set; }
+
     }
 }

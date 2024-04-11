@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kitabist.Order.Application.Features.Commands.Order.UpdateOrder
+namespace Kitabist.Order.Application.Features.Commands.Address.CreateAddress
 {
-    public class UpdateOrderCommandResponse:Result
+    public class CreateAddressCommandResponse : Result
     {
-        
+
     }
 }

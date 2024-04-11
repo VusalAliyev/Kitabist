@@ -1,11 +1,10 @@
-﻿using Kitabist.Order.Application.Interfaces;
+﻿using Kitabist.Order.Application.Common.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ordering = Kitabist.Order.Domain.Entities.Order;
 
 
 namespace Kitabist.Order.Application.Features.Commands.Order.DeleteOrder
@@ -21,7 +20,8 @@ namespace Kitabist.Order.Application.Features.Commands.Order.DeleteOrder
 
         public async Task<DeleteOrderCommandResponse> Handle(DeleteOrderCommandRequest request, CancellationToken cancellationToken)
         {
-            await _repository.DeleteAsync(request.Id);
+            var deletedOrder = await _repository.GetByIdAsync(request.Id);
+            await _repository.DeleteAsync(deletedOrder);
 
             return new DeleteOrderCommandResponse { IsSuccess = true };
         }
