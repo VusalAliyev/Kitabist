@@ -20,8 +20,8 @@ namespace Kitabist.Order.Application.Features.Commands.Order.DeleteOrder
 
         public async Task<DeleteOrderCommandResponse> Handle(DeleteOrderCommandRequest request, CancellationToken cancellationToken)
         {
-            var deletedOrder = await _repository.GetByIdAsync(request.Id);
-            await _repository.DeleteAsync(deletedOrder);
+            //var deletedOrder = await _repository.GetByIdAsync(request.Id);
+            await _repository.DeleteAsync(request.Id);
 
             return new DeleteOrderCommandResponse { IsSuccess = true };
         }

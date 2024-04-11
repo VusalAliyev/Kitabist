@@ -28,8 +28,9 @@ namespace Kitabist.Order.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAddressById(GetAddressByIdQueryRequest request)
+        public async Task<IActionResult> GetAddressById(int id)
         {
+            var request=new GetAddressByIdQueryRequest(id);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
@@ -38,21 +39,21 @@ namespace Kitabist.Order.WebAPI.Controllers
         public async Task<IActionResult> AddAddress(CreateAddressCommandRequest request)
         {
             await _mediator.Send(request);
-            return Ok("Address added successfuly");
+            return Ok("Address added successfully");
         }
 
         [HttpDelete]
         public async Task<IActionResult> DeleteAddress([FromQuery]DeleteAddressCommandRequest request)
         {
             await _mediator.Send(request);
-            return Ok("Address removed successfuly");
+            return Ok("Address removed successfully");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateAddress(UpdateAddressCommandRequest request)
         {
             await _mediator.Send(request);
-            return Ok("Address updated successfuly");
+            return Ok("Address updated successfully");
         }
     }
 }

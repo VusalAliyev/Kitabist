@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kitabist.Order.Application.Features.Queries.Address.GetAddressById
 {
-    internal class GetAddressByIdQueryResponse
+    public class GetAddressByIdQueryResponse
     {
+        public int AdressId { get; set; }
+        public int UserId { get; set; }
+        public string District { get; set; }
+        public string City { get; set; }
+        public string Detail { get; set; }
     }
 }

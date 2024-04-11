@@ -23,6 +23,7 @@ namespace Kitabist.Order.Application.Features.Queries.Order.GetAllOrders
 
             return orders.Select(o => new GetAllOrdersQueryResponse
             {
+                OrderId=o.OrderId,
                 UserId = o.UserId,
                 OrderDate = o.OrderDate,
                 OrderDetails = o.OrderDetails,

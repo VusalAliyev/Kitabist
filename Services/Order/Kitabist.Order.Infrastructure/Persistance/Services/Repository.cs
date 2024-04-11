@@ -1,9 +1,11 @@
-﻿using Kitabist.Order.Application.Common.Interfaces;
+﻿using Azure.Core;
+using Kitabist.Order.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Kitabist.Order.Infrastructure.Persistance.Services
@@ -23,9 +25,11 @@ namespace Kitabist.Order.Infrastructure.Persistance.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task DeleteAsync(int id)
         {
-            _context.Set<T>().Remove(entity);
+
+            var deletedProduct = await _context.Set<T>().FindAsync(id);
+            _context.Set<T>().Remove(deletedProduct);
             await _context.SaveChangesAsync();
         }
 

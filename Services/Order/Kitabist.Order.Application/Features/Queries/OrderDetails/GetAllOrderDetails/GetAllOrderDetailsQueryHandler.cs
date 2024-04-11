@@ -22,8 +22,8 @@ namespace Kitabist.Order.Application.Features.Queries.OrderDetails.GetAllOrderDe
 
             return orderDetails.Select(o => new GetAllOrderDetailsQueryResponse
             {
+                OrderDetailId = o.OrderDetailId,
                 OrderId = o.OrderId,
-                OrderDetailId = o.OrderId,
                 ProductAmount = o.ProductAmount,
                 ProductId = o.ProductId,
                 ProductName = o.ProductName,

@@ -12,6 +12,6 @@ namespace Kitabist.Order.Application.Common.Interfaces
         Task<T> GetByIdAsync(int id);
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
-        Task DeleteAsync(T entity);
+        Task DeleteAsync(int id);
     }
 }

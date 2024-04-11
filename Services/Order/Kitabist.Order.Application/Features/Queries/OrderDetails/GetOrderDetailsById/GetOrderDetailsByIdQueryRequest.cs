@@ -8,6 +8,10 @@ namespace Kitabist.Order.Application.Features.Queries.OrderDetails.GetOrderDetai
 {
     public class GetOrderDetailsByIdQueryRequest:IRequest<GetOrderDetailsByIdQueryResponse>
     {
+        public GetOrderDetailsByIdQueryRequest(int id)
+        {
+            Id = id;
+        }
         public int Id { get; set; }
     }
 }

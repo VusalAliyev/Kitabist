@@ -1,4 +1,6 @@
-﻿using Kitabist.Order.Infrastructure.Persistance;
+﻿using Kitabist.Order.Application.Common.Interfaces;
+using Kitabist.Order.Infrastructure.Persistance;
+using Kitabist.Order.Infrastructure.Persistance.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,8 +18,11 @@ namespace Kitabist.Order.Infrastructure
         {
             services.AddDbContext<OrderDbContext>(opt =>
             {
-                opt.UseSqlServer(configuration.GetConnectionString("DiscountDefaultConnection"));
+                opt.UseSqlServer(configuration.GetConnectionString("OrderDefaultConnection"));
             });
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
             return services;
         }
     }

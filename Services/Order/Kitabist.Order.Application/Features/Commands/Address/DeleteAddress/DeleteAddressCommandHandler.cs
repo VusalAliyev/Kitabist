@@ -17,8 +17,8 @@ namespace Kitabist.Order.Application.Features.Commands.Address.DeleteAddress
 
         public async Task<DeleteAddressCommandResponse> Handle(DeleteAddressCommandRequest request, CancellationToken cancellationToken)
         {
-            var deletedAddress = await _repository.GetByIdAsync(request.AdressId);
-            await _repository.DeleteAsync(deletedAddress);
+            //var deletedAddress = await _repository.GetByIdAsync(request.AdressId);
+            await _repository.DeleteAsync(request.AdressId);
 
             return new DeleteAddressCommandResponse { IsSuccess = true };
 
