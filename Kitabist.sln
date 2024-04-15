@@ -15,13 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Discount", "Servic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{D6181488-4202-419D-A455-7C7F287C46C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitabist.Order.WebAPI", "Services\Order\Kitabist.Order.WebAPI\Kitabist.Order.WebAPI.csproj", "{607ACBB1-6ED9-453C-96EE-451BAEF41F1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Order.WebAPI", "Services\Order\Kitabist.Order.WebAPI\Kitabist.Order.WebAPI.csproj", "{607ACBB1-6ED9-453C-96EE-451BAEF41F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitabist.Order.Application", "Services\Order\Kitabist.Order.Application\Kitabist.Order.Application.csproj", "{A1BA91ED-674E-473A-B8B2-1AD735A5109A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Order.Application", "Services\Order\Kitabist.Order.Application\Kitabist.Order.Application.csproj", "{A1BA91ED-674E-473A-B8B2-1AD735A5109A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitabist.Order.Infrastructure", "Services\Order\Kitabist.Order.Infrastructure\Kitabist.Order.Infrastructure.csproj", "{DFA63B22-F5FC-4A37-B2CF-B10AAB565F66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Order.Infrastructure", "Services\Order\Kitabist.Order.Infrastructure\Kitabist.Order.Infrastructure.csproj", "{DFA63B22-F5FC-4A37-B2CF-B10AAB565F66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitabist.Order.Domain", "Services\Order\Kitabist.Order.Domain\Kitabist.Order.Domain.csproj", "{3F003E9D-6C82-4D3F-BD54-259FE1F2A394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.Order.Domain", "Services\Order\Kitabist.Order.Domain\Kitabist.Order.Domain.csproj", "{3F003E9D-6C82-4D3F-BD54-259FE1F2A394}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{90D1F506-2DD2-4F82-AC4F-D80AC98E7157}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitabist.IdentityServer", "IdentityServer\Kitabist.IdentityServer\Kitabist.IdentityServer.csproj", "{AC7B7C2D-02E1-4E92-B356-0028B0285F7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{3F003E9D-6C82-4D3F-BD54-259FE1F2A394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F003E9D-6C82-4D3F-BD54-259FE1F2A394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F003E9D-6C82-4D3F-BD54-259FE1F2A394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7B7C2D-02E1-4E92-B356-0028B0285F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7B7C2D-02E1-4E92-B356-0028B0285F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7B7C2D-02E1-4E92-B356-0028B0285F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7B7C2D-02E1-4E92-B356-0028B0285F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,7 @@ Global
 		{A1BA91ED-674E-473A-B8B2-1AD735A5109A} = {D6181488-4202-419D-A455-7C7F287C46C4}
 		{DFA63B22-F5FC-4A37-B2CF-B10AAB565F66} = {D6181488-4202-419D-A455-7C7F287C46C4}
 		{3F003E9D-6C82-4D3F-BD54-259FE1F2A394} = {D6181488-4202-419D-A455-7C7F287C46C4}
+		{AC7B7C2D-02E1-4E92-B356-0028B0285F7B} = {90D1F506-2DD2-4F82-AC4F-D80AC98E7157}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF5874F7-CA8F-4B3B-8671-0E685CD26705}
