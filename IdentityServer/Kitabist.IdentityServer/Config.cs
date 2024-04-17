@@ -1,7 +1,4 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
-// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
-
-
+﻿
 using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
@@ -48,8 +45,8 @@ namespace Kitabist.IdentityServer
             new Client
             {
                 ClientId="KitabistManagerId",
-                ClientName="Multi Shop Manager User",
-                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
+                ClientName="Kitabist Manager User",
+                AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("kitabistsecret".Sha256()) },
                 AllowedScopes={ "CatalogReadPermission", "CatalogFullPermission", "BasketFullPermission", "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission","DiscountFullPermission","OrderFullPermisson",
                 IdentityServerConstants.LocalApi.ScopeName,
@@ -62,8 +59,8 @@ namespace Kitabist.IdentityServer
             new Client
             {
                 ClientId="KitabistAdminId",
-                ClientName="Multi Shop Admin User",
-                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
+                ClientName="Kitabist Admin User",
+                AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("kitabistsecret".Sha256()) },
                 AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermisson",
                 IdentityServerConstants.LocalApi.ScopeName,

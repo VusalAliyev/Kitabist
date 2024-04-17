@@ -1,12 +1,16 @@
-﻿using Kitabist.IdentityServer.DTOs;
+﻿using IdentityServer4.Hosting.LocalApiAuthentication;
+using Kitabist.IdentityServer.DTOs;
 using Kitabist.IdentityServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using static IdentityServer4.IdentityServerConstants;
 
 namespace Kitabist.IdentityServer.Controllers
 {
+    [Authorize(LocalApi.PolicyName)]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthController : ControllerBase
