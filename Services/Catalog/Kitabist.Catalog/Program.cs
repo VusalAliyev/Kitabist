@@ -1,10 +1,19 @@
 using Kitabist.Catalog.Services;
 using Kitabist.Catalog.Services.Interfaces;
 using Kitabist.Catalog.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Authority = "ResourceCatalog";
+    opt.RequireHttpsMetadata=false;
+});
 
 // Add services to the container.
 
@@ -38,6 +47,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

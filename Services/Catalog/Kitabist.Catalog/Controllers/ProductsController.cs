@@ -3,11 +3,13 @@ using Kitabist.Catalog.Dtos.Product;
 using Kitabist.Catalog.Dtos.ProductDetail;
 using Kitabist.Catalog.Services;
 using Kitabist.Catalog.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kitabist.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase

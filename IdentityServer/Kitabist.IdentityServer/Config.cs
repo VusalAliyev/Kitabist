@@ -12,6 +12,7 @@ namespace Kitabist.IdentityServer
            new ApiResource("ResourceCatalog"){Scopes={"CatalogFullPermission","CatalogReadPermission"} },
            new ApiResource("ResourceDiscount"){Scopes={"DiscountFullPermission"} },
            new ApiResource("ResourceOrder"){Scopes={"OrderFullPermisson"}},
+           new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
        };
 
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -26,6 +27,7 @@ namespace Kitabist.IdentityServer
             new ApiScope("CatalogFullPermission","Full authority for catalog operations"),
             new ApiScope("CatalogReadPermission","Reading authority for catalog operations"),
             new ApiScope("DiscountFullPermission","Full authority for discount operations"),
+            new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<Client> Clients => new Client[]
@@ -37,7 +39,7 @@ namespace Kitabist.IdentityServer
                 ClientName="Multi Shop Visitor User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("kitabistsecret".Sha256())},
-                AllowedScopes={"CatalogReadPermission","CatalogFullPermission",IdentityServerConstants.LocalApi.ScopeName},
+                AllowedScopes={"CatalogReadPermission","CatalogFullPermission"},
                 AllowAccessTokensViaBrowser=true
             },
 
@@ -48,11 +50,7 @@ namespace Kitabist.IdentityServer
                 ClientName="Kitabist Manager User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("kitabistsecret".Sha256()) },
-                AllowedScopes={ "CatalogReadPermission", "CatalogFullPermission", "BasketFullPermission", "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission","DiscountFullPermission","OrderFullPermisson",
-                IdentityServerConstants.LocalApi.ScopeName,
-                IdentityServerConstants.StandardScopes.Email,
-                IdentityServerConstants.StandardScopes.OpenId,
-                IdentityServerConstants.StandardScopes.Profile }
+                AllowedScopes={ "CatalogReadPermission", "CatalogFullPermission"}
             },
 
             //Admin
