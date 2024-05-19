@@ -26,28 +26,22 @@ namespace Kitabist.IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterDto userRegisterDto)
         {
-            var userCredentials = new ApplicationUser()
+            var values = new ApplicationUser()
             {
-                Email=userRegisterDto.Email,
-                UserName=userRegisterDto.Username,
-                Name=userRegisterDto.Name,
-                Surname=userRegisterDto.Surname
+                UserName = userRegisterDto.Username,
+                Email = userRegisterDto.Email,
+                Name = userRegisterDto.Name,
+                Surname = userRegisterDto.Surname
             };
-            var result = await _userManager.CreateAsync(userCredentials, userRegisterDto.Password);
-
+            var result = await _userManager.CreateAsync(values, userRegisterDto.Password);
             if (result.Succeeded)
             {
-                return Ok("User registered successfully");
+                return Ok("Account registered successfully");
             }
             else
             {
-                return Ok("Problem occured");
+                return Ok("Error happened");
             }
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Login(UserLoginDto userLoginDto)
-        //{
-
-        //}
     }
 }
